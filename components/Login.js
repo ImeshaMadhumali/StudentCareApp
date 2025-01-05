@@ -2,7 +2,7 @@ import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, Image } from 'react-native';
 
 import { useNavigation } from '@react-navigation/native';
-import logo from './assets/logo.png';
+import logo from '../assets/logo.png';
 
 export default function Login(){
 return (
