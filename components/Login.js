@@ -1,11 +1,13 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, Image } from 'react-native';
 
 import { useNavigation } from '@react-navigation/native';
+import logo from './assets/logo.png';
 
 export default function Login(){
 return (
     <View style={styles.container}>
+        <Image source={logo} style={styles.logo} />
     <Text variant="titleLarge">STUDENT LOGIN</Text>
     <StatusBar style="auto" />
     <Divider/>
@@ -33,11 +35,16 @@ return (
 }
 
 export const styles = StyleSheet.create({
-    container: {
+     container: {
       flex: 1,
       backgroundColor: '#fff',
       alignItems: 'center',
       justifyContent: 'center',
+    },
+    logo: {
+        width: 100,
+        height: 100,  // Adjust this according to your logo size
+        marginBottom: 20,
     },
     title: {
         fontSize: 24,
