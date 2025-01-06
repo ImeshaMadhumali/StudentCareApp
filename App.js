@@ -5,7 +5,7 @@ import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Login from './components/Login';  // Import Login screen
-
+import Profile from './components/Profile';
 
 const Stack = createNativeStackNavigator();
 
@@ -23,11 +23,11 @@ export default function App() {
               headerTitleStyle: {
                 color: '#ffffff',  // White title text
                 fontSize: 20,
-                //alignItems: 'center'
               },
             }}
           >
             <Stack.Screen name='Login' component={Login} options={{ title: "STUDENT LOGIN" }} />
+            <Stack.Screen name='Profile' component={Profile} options={{ title: "Student Profile" }} />
           </Stack.Navigator>
         </NavigationContainer>
       </SafeAreaProvider>

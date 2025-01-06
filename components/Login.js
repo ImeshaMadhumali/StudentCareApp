@@ -17,7 +17,7 @@ export default function Login() {
     const handleLogin = () => {
         const student = students.find((s) => s.username === username);
         if (student && student.password === password) {
-          navigation.navigate('Profile'); // Navigate to Profile screen after successful login
+          navigation.navigate('Profile', { student }); // Navigate to Profile screen after successful login
         } else {
           alert('Invalid username or password'); // Alert for invalid credentials
         }
