@@ -15,13 +15,13 @@ export default function Login() {
     const navigation = useNavigation();
 
     const handleLogin = () => {
-        const student = students.find(s => s.username === username);
+        const student = students.find((s) => s.username === username);
         if (student && student.password === password) {
-            navigation.navigate('Profile'); // Navigate to Profile screen after successful login
+          navigation.navigate('Profile'); // Navigate to Profile screen after successful login
         } else {
-            alert('Invalid username or password'); // Alert for invalid credentials
+          alert('Invalid username or password'); // Alert for invalid credentials
         }
-    };
+      };
 
     return (
         <View style={styles.container}>
@@ -53,7 +53,7 @@ export default function Login() {
             />
             <Button
                 mode="contained"
-                onPress={pressed}
+                onPress={handleLogin}
                 style={styles.button}
                 buttonColor="#800080" // Purple color
                 textColor="#fff"
