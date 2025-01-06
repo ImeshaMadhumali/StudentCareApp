@@ -4,7 +4,7 @@ import { Divider, Card } from 'react-native-paper';
 import logo from '../assets/logo.png';
 
 export default function Profile({ route }) {
-    const { student } = route.params; // Access student data
+    const { student } = route.params;
 
     return (
         <ScrollView contentContainerStyle={styles.container}>
@@ -14,7 +14,7 @@ export default function Profile({ route }) {
             <Card style={styles.card}>
                 <View style={styles.cardContent}>
                     <Image
-                        source={student.profile_pic} // Display the student's picture
+                        source={student.profile_pic} 
                         style={styles.avatar}
                     />
                     <Text style={styles.name}>{student.name}</Text>
@@ -52,8 +52,8 @@ const styles = StyleSheet.create({
     },
     logo: {
         width: 300,
-        height: 80,  // Adjust this according to your logo size
-        marginBottom: 100, // Reduce this value to move the title closer to the logo
+        height: 80,  
+        marginBottom: 100, 
        
     },
     card: {

@@ -10,16 +10,16 @@ import { useNavigation } from '@react-navigation/native';
 export default function Login() {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
-    const [secureText, setSecureText] = useState(true); // State for password visibility
+    const [secureText, setSecureText] = useState(true); 
 
     const navigation = useNavigation();
 
     const handleLogin = () => {
         const student = students.find((s) => s.username === username);
         if (student && student.password === password) {
-          navigation.navigate('Layout', { student }); // Navigate to Profile screen after successful login
+          navigation.navigate('Layout', { student }); 
         } else {
-          alert('Invalid username or password'); // Alert for invalid credentials
+          alert('Invalid username or password'); 
         }
       };
 
@@ -42,11 +42,11 @@ export default function Login() {
                 label="Password"
                 value={password}
                 onChangeText={setPassword}
-                secureTextEntry={secureText} // Toggle password visibility
+                secureTextEntry={secureText} 
         right={
           <TextInput.Icon
             name={secureText ? "eye-off" : "eye"}
-            onPress={() => setSecureText(!secureText)} // Toggle secureText
+            onPress={() => setSecureText(!secureText)} 
             />
         }
                 style={styles.input}
@@ -55,7 +55,7 @@ export default function Login() {
                 mode="contained"
                 onPress={handleLogin}
                 style={styles.button}
-                buttonColor="#800080" // Purple color
+                buttonColor="#800080" 
                 textColor="#fff"
             >
 
@@ -76,26 +76,26 @@ export const styles = StyleSheet.create({
     },
     logo: {
         width: 300,
-        height: 80,  // Adjust this according to your logo size
-        marginBottom: 100, // Reduce this value to move the title closer to the logo
+        height: 80,  
+        marginBottom: 100,
        
     },
     title: {
         fontSize: 20,
         fontWeight: 'bold',
-        marginBottom: 80, // Ensure the title is closer to the input fields
-        textAlign: 'center', // Center-align the title
+        marginBottom: 80, 
+        textAlign: 'center', 
     },
     input: {
         height: 40,
         borderColor: 'gray',
         borderWidth: 1,
         paddingLeft: 8,
-        marginBottom: 16, // Creates space between input fields and button
+        marginBottom: 16, 
     },
     input: {
-        backgroundColor: 'white', // White background
-        color: 'black', // Black font color
+        backgroundColor: 'white', 
+        color: 'black', 
         marginBottom: 16,
         width: '80%',
 

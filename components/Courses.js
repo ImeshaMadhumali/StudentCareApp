@@ -3,10 +3,10 @@ import { View, Text, StyleSheet, ScrollView, Image } from 'react-native';
 import { Card, Divider } from 'react-native-paper';
 import logo from '../assets/logo.png';
 import { courses } from '../assets/data/StudentsDb';
-import { styles as loginStyles } from './Login'; // Renamed to avoid style conflicts
+import { styles as loginStyles } from './Login'; 
 
 export default function Course({ route }) {
-    // Safe handling for missing route.params
+  
     const { student } = route.params || {};
     const id = student?.course_id;
 
@@ -70,8 +70,8 @@ const styles = StyleSheet.create({
     },
     logo: {
         width: 300,
-        height: 80,  // Adjust this according to your logo size
-        marginBottom: 100,  // Reduced spacing for better layout
+        height: 80, 
+        marginBottom: 100,  
     },
     card: {
         width: '100%',
@@ -99,7 +99,7 @@ const styles = StyleSheet.create({
         fontSize: 18,
         marginBottom: 8,
         alignSelf: 'flex-start',
-        color: '#555', // Subtle color for course data
+        color: '#555', 
     },
     divider: {
         width: '100%',

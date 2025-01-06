@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { BottomNavigation } from 'react-native-paper';
 import Profile from './Profile';
-import Courses from './Courses';  // Ensure these components exist
+import Courses from './Courses';  
 import Subjects from './Subjects';
 
 export default function Layout({ route }) {

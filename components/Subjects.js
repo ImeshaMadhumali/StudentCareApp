@@ -64,8 +64,8 @@ const styles = StyleSheet.create({
     },
     logo: {
         width: 300,
-        height: 80,  // Adjust this according to your logo size
-        marginBottom: 100,  // Reduced spacing for better layout
+        height: 80,  
+        marginBottom: 100,  
     },
     card: {
         width: '100%',
@@ -90,11 +90,11 @@ const styles = StyleSheet.create({
         color: '#333',
     },
     row: {
-        flexDirection: 'row', // Arrange items in a row
-        justifyContent: 'space-between', // Space between elements
-        alignItems: 'center', // Align vertically to center
-        width: '100%', // Make the row full width
-        paddingHorizontal: 16, // Optional: add padding for spacing
+        flexDirection: 'row', 
+        justifyContent: 'space-between', 
+        alignItems: 'center', 
+        width: '100%', 
+        paddingHorizontal: 16, 
         color: 'gray',
     },
     studata: {
@@ -102,7 +102,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         marginBottom: 14,
         alignSelf: 'flex-start',
-        color: '#555', // Subtle color for course data
+        color: '#555', 
     },
     sectionTitle: {
         fontSize: 20,
@@ -112,23 +112,23 @@ const styles = StyleSheet.create({
         color: '#333',
     },
     subjectContainer: {
-        flexDirection: 'row',          // Horizontal layout
-        justifyContent: 'space-between', // Space out subject and marks
-        alignItems: 'center',          // Align items vertically
-        marginBottom: 8,               // Spacing between rows
-         paddingVertical: 8,            // Vertical padding
-         paddingHorizontal: 16,         // Side padding
+        flexDirection: 'row',          
+        justifyContent: 'space-between', 
+        alignItems: 'center',         
+        marginBottom: 8,              
+         paddingVertical: 8,            
+         paddingHorizontal: 16,         
     },
     subjectText: {
-        fontSize: 16,  // Adjust font size for subject names
+        fontSize: 16,  
         color: '#333',
-        flex: 1,        // Allow text to occupy space as needed
+        flex: 1,        
     },
     marksText: {
-        fontSize: 16,   // Adjust font size for marks
+        fontSize: 16,   
         color: '#333',
-        textAlign: 'right', // Align the marks to the right
-        minWidth: 50,   // Optional: add a minimum width
+        textAlign: 'right', 
+        minWidth: 50,   
     },
     divider: {
         width: '100%',
