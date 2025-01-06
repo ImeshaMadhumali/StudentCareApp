@@ -18,19 +18,3 @@ React Navigation: Manages navigation between screens.
 React Native Paper: Provides UI components like Button, TextInput, Divider, etc.
 Expo: Simplifies React Native development and testing.
 
-Project Structure
-
-├── components
-│   ├── Login.js             # Login screen component where students enter their credentials
-│   ├── Profile.js           # Profile screen component displaying student information
-│   ├── Courses.js           # Course information screen component
-│   ├── Subjects.js          # Subject and marks input and display component
-|   |── layout.js            # Include Bottum Navigation
-├── assets
-│   └── profilepic           # Images used in the app
-├── App.js                   # Root component that sets up navigation and routing
-├── data
-│   └── StudentsDb.js        # A mock database of student data (e.g., usernames, passwords, profiles)
-├── package.json             # Project dependencies and configuration
-├── README.md                # Documentation for the project, describing its functionality and setup
-
