@@ -80,7 +80,7 @@ const styles = StyleSheet.create({
     name: {
         fontSize: 24,
         fontWeight: 'bold',
-        color: '#800080',
+        color: '#333',
     },
     details: {
         fontSize: 16,
@@ -97,7 +97,7 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
         alignSelf: 'flex-start',
         marginBottom: 8,
-        color: '#800080',
+        color: '#333',
     },
     info: {
         fontSize: 16,
