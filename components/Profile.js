@@ -83,7 +83,7 @@ const styles = StyleSheet.create({
         color: '#333',
     },
     details: {
-        fontSize: 16,
+        fontSize: 12,
         color: '#555',
         marginBottom: 16,
     },
@@ -93,14 +93,14 @@ const styles = StyleSheet.create({
         backgroundColor: '#ccc',
     },
     sectionTitle: {
-        fontSize: 18,
+        fontSize: 16,
         fontWeight: 'bold',
         alignSelf: 'flex-start',
         marginBottom: 8,
         color: '#333',
     },
     info: {
-        fontSize: 16,
+        fontSize: 12,
         color: '#333',
         alignSelf: 'flex-start',
         marginBottom: 4,
