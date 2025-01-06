@@ -22,19 +22,27 @@ export default function Subjects({ route }) {
             <Card style={styles.card}>
                 <View style={styles.userProfile}></View>
                 <Text style={styles.title}>{course.name}</Text>
-                <Text style={styles.studata}>Number of Subjects: {courseSubjects.length}</Text>
-                <Text style={styles.studata}>Average Marks: {averageMarks.toFixed(2)}</Text>
+                <Text style={styles.studata}>{courseSubjects.length} Subjects| Average : {averageMarks.toFixed(2)}</Text>
 
                 <Divider style={styles.divider} />
-                <Text style={styles.sectionTitle}>Subjects and Marks</Text>
-                {courseSubjects.map(subject => (
-                    <View key={subject.id} style={styles.subjectContainer}>
-                        <Text style={styles.subjectText}>{subject.name}</Text>
-                        <Text style={styles.marksText}>
-                            Marks: {studentMarks.find(mark => mark.subject_id === subject.id)?.marks || 'N/A'}
-                        </Text>
-                    </View>
-                ))}
+
+                <Text style={styles.sectionTitle}>Marks Information</Text>
+                <View style={styles.row}>
+                    <Text style={styles.subtitle}>Subject</Text>
+                    <Text style={styles.subtitle}>Marks</Text>
+                </View>
+
+                <Divider style={styles.divider} />
+
+                {courseSubjects.map(subject => {
+                    const subjectMarks = studentMarks.find(mark => mark.subject_id === subject.id)?.marks || 'N/A';
+                    return (
+                        <View key={subject.id} style={styles.subjectContainer}>
+                            <Text style={styles.subjectText}>{subject.name}</Text>
+                            <Text style={styles.marksText}>{subjectMarks}</Text>
+                        </View>
+                    );
+                })}
             </Card>
             <View style={styles.footer}>
                 <Text style={{ color: "#ffffff" }}>UoV © 2025</Text>
@@ -74,25 +82,53 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         marginBottom: 12,
     },
-    studata: {
-        fontSize: 18,
+    title: {
+        fontSize: 22,
+        fontWeight: 'bold',
         marginBottom: 8,
+        textAlign: 'center',
+        color: '#333',
+    },
+    row: {
+        flexDirection: 'row', // Arrange items in a row
+        justifyContent: 'space-between', // Space between elements
+        alignItems: 'center', // Align vertically to center
+        width: '100%', // Make the row full width
+        paddingHorizontal: 16, // Optional: add padding for spacing
+        color: 'gray',
+    },
+    studata: {
+        fontSize: 16,
+        alignItems: 'center',
+        marginBottom: 14,
         alignSelf: 'flex-start',
         color: '#555', // Subtle color for course data
     },
     sectionTitle: {
         fontSize: 20,
         fontWeight: 'bold',
-        marginBottom: 6,
-        textAlign: 'center',
+        marginBottom: 12,
+        textAlign: 'justify',
         color: '#333',
     },
+    subjectContainer: {
+        flexDirection: 'row',          // Horizontal layout
+        justifyContent: 'space-between', // Space out subject and marks
+        alignItems: 'center',          // Align items vertically
+        marginBottom: 8,               // Spacing between rows
+         paddingVertical: 8,            // Vertical padding
+         paddingHorizontal: 16,         // Side padding
+    },
     subjectText: {
-        fontSize: 16,
-        fontWeight: 'bold',
+        fontSize: 16,  // Adjust font size for subject names
+        color: '#333',
+        flex: 1,        // Allow text to occupy space as needed
     },
     marksText: {
-        fontSize: 16,
+        fontSize: 16,   // Adjust font size for marks
+        color: '#333',
+        textAlign: 'right', // Align the marks to the right
+        minWidth: 50,   // Optional: add a minimum width
     },
     divider: {
         width: '100%',
