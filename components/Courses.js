@@ -73,10 +73,6 @@ const styles = StyleSheet.create({
         height: 80,  // Adjust this according to your logo size
         marginBottom: 100,  // Reduced spacing for better layout
     },
-    scrollContainer: {
-        padding: 16,
-        alignItems: 'center',
-    },
     card: {
         width: '100%',
         padding: 12,
