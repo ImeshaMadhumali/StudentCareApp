@@ -8,7 +8,7 @@ export default function Profile({ route }) {
     return (
         <View style={styles.container}>
              <Image
-                source={student.picture} // Display the student's picture
+                source={student.profile_pic} // Display the student's picture
                 style={styles.avatar}
             />
             <Text style={styles.name}>{student.name}</Text>
@@ -20,7 +20,9 @@ export default function Profile({ route }) {
             <Text style={styles.info}>Address: {student.address}</Text>
             <Divider style={styles.divider} />
             <Text style={styles.sectionTitle}>Biological Information</Text>
-            <Text style={styles.info}>Blood Group: {student.bloodGroup}</Text>
+            <Text style={styles.info}>Gender: {student.gender}</Text>
+            <Text style={styles.info}>Age: {student.age}</Text>
+            <Text style={styles.info}>Blood Group: {student.blood_group}</Text>
         </View>
     );
 }
