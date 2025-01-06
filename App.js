@@ -5,7 +5,7 @@ import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Login from './components/Login';  // Import Login screen
-import Profile from './components/Profile';
+import Layout from './components/layout';
 
 const Stack = createNativeStackNavigator();
 
@@ -26,12 +26,20 @@ export default function App() {
               },
             }}
           >
-            <Stack.Screen name='Login' component={Login} options={{ title: "STUDENT LOGIN" }} />
-            <Stack.Screen name='Profile' component={Profile} options={{ title: "Student Profile" }} />
+            <Stack.Screen
+              name='Login'
+              component={Login}
+              options={{ title: "STUDENT LOGIN" }}
+            />
+            <Stack.Screen
+              name='Layout'
+              component={Layout}
+              options={{ headerShown: false }}
+            />
           </Stack.Navigator>
         </NavigationContainer>
       </SafeAreaProvider>
-    </PaperProvider>
+    </PaperProvider >
   );
 }
 

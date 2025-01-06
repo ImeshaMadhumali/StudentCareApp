@@ -1,9 +1,11 @@
 import * as React from 'react';
 import { BottomNavigation } from 'react-native-paper';
 import Profile from './Profile';
+import Courses from './Courses';  // Ensure these components exist
+import Subjects from './Subjects';
 
 export default function Layout({ route }) {
-    const { user } = route.params;
+    const { student } = route.params;
     const [index, setIndex] = React.useState(0);
     const [routes] = React.useState([
       { key: 'profile', title: 'Profile', focusedIcon: 'account', unfocusedIcon: 'account-outline' },
@@ -12,9 +14,9 @@ export default function Layout({ route }) {
     ]);
 
     const renderScene = BottomNavigation.SceneMap({
-        profile: () => <Profile user={user} />,
-        courses: () => <Courses student={student} />,
-        subjects: () => <Subjects student={student} />,
+        profile: () => <Profile route={{params: {student} }}/>,
+        courses: () => <Courses route={{params: {student} }}/>,
+        subjects: () => <Subjects route={{params: {student} }}/>,
       });
 
       return (
