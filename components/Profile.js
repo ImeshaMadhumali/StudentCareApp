@@ -20,7 +20,7 @@ export default function Profile({ route }) {
                     <Text style={styles.name}>{student.name}</Text>
                     <Text style={styles.details}>Age: {student.age} | Gender: {student.gender}</Text>
                 </View>
-            </Card>
+            
             <Divider style={styles.divider} />
             <Text style={styles.sectionTitle}>Contact Information</Text>
             <Text style={styles.info}>Email: {student.email}</Text>
@@ -31,9 +31,10 @@ export default function Profile({ route }) {
             <Text style={styles.info}>Gender: {student.gender}</Text>
             <Text style={styles.info}>Age: {student.age}</Text>
             <Text style={styles.info}>Blood Group: {student.blood_group}</Text>
+            </Card>
             <View style={styles.footer}>
-                <Text style={styles.footerText}>Footer Content Here</Text>
-            </View>
+            <Text style={{color: "#ffffff"}}>UoV © 2025</Text>
+        </View>
         </ScrollView>
     );
 }
@@ -104,4 +105,11 @@ const styles = StyleSheet.create({
         alignSelf: 'flex-start',
         marginBottom: 4,
     },
+    footer: {
+        backgroundColor: "#520f4e",
+        width: "100%",
+        alignItems: "center",
+        height: 50,
+        justifyContent: "center",
+      },
 });
