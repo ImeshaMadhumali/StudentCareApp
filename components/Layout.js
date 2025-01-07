@@ -9,6 +9,7 @@ const Stack = createNativeStackNavigator();
 
 export default function Layout({ route }) {
     const { student } = route.params;
+    
     const BottomTabs = () => {
     const [index, setIndex] = React.useState(0);
     const [routes] = React.useState([
@@ -28,7 +29,7 @@ export default function Layout({ route }) {
           navigationState={{ index, routes }}
           onIndexChange={setIndex}
           renderScene={renderScene}
-          keyExtractor={(item) => item.key}
+    
         />
       );
     };
