@@ -3,7 +3,6 @@ import { View, Text, StyleSheet, ScrollView, Image } from 'react-native';
 import { Card, Divider } from 'react-native-paper';
 import logo from '../assets/logo.png';
 import { courses } from '../assets/data/StudentsDb';
-import { styles as loginStyles } from './Login'; 
 
 export default function Course({ route }) {
   
@@ -96,7 +95,7 @@ const styles = StyleSheet.create({
         color: '#333',
     },
     studata: {
-        fontSize: 18,
+        fontSize: 14,
         marginBottom: 8,
         alignSelf: 'flex-start',
         color: '#555', 

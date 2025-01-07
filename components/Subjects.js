@@ -83,7 +83,7 @@ const styles = StyleSheet.create({
         marginBottom: 12,
     },
     title: {
-        fontSize: 22,
+        fontSize: 24,
         fontWeight: 'bold',
         marginBottom: 8,
         textAlign: 'center',
@@ -98,7 +98,7 @@ const styles = StyleSheet.create({
         color: 'gray',
     },
     studata: {
-        fontSize: 16,
+        fontSize: 14,
         alignItems: 'center',
         marginBottom: 14,
         alignSelf: 'flex-start',

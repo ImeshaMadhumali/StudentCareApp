@@ -28,10 +28,11 @@ export default function Layout({ route }) {
           navigationState={{ index, routes }}
           onIndexChange={setIndex}
           renderScene={renderScene}
+          keyExtractor={(item) => item.key}
         />
       );
     };
-    
+
       return (
         <Stack.Navigator
           screenOptions={{

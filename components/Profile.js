@@ -83,7 +83,7 @@ const styles = StyleSheet.create({
         color: '#333',
     },
     details: {
-        fontSize: 12,
+        fontSize: 14,
         color: '#555',
         marginBottom: 16,
     },
@@ -100,7 +100,7 @@ const styles = StyleSheet.create({
         color: '#333',
     },
     info: {
-        fontSize: 12,
+        fontSize: 14,
         color: '#333',
         alignSelf: 'flex-start',
         marginBottom: 4,
