@@ -12,11 +12,11 @@ export default function Layout({ route }) {
 
   const BottomTabs = () => {
     const [index, setIndex] = React.useState(0);
-    const [routes] = React.useState([
+    const routes= [
       { key: 'profile', title: 'Profile', focusedIcon: 'account', unfocusedIcon: 'account-outline' },
       { key: 'courses', title: 'Courses', focusedIcon: 'school', unfocusedIcon: 'school-outline' },
       { key: 'subjects', title: 'Subjects', focusedIcon: 'book-open', unfocusedIcon: 'book-open-outline' },
-    ]);
+    ];
 
     const renderScene = BottomNavigation.SceneMap({
       profile: () => <Profile route={{ params: { student } }} />,
@@ -24,13 +24,25 @@ export default function Layout({ route }) {
       subjects: () => <Subjects route={{ params: { student } }} />,
     });
 
+    const renderBar = (props) => {
+      return (
+        <BottomNavigation.Bar
+          {...props}
+          getLabelText={({ route }) => route.title} // Custom label rendering
+          getAccessibilityLabel={({ route }) => route.title} // Accessibility improvement
+          getTestID={({ route }) => `bottom-tab-${route.key}`}
+        />
+      );
+    };
+
     return (
       <BottomNavigation
-        navigationState={{ index, routes }}
-        onIndexChange={(newIndex) => setIndex(newIndex)}
-        renderScene={renderScene}
+      navigationState={{ index, routes }}
+      onIndexChange={setIndex}
+      renderScene={renderScene}
+      renderBar={renderBar} // Use the custom renderBar
+    />
 
-      />
     );
   };
 
